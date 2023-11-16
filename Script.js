@@ -2,4 +2,6 @@
 /* GsLibrary Script Is Currently On Version 1.0.1 */
 
 
-/* nothing here yet, sowwy */
+function NoRMenu(object){
+    object.addEventListener("contextmenu", (event) => {event.preventDefault()});
+}

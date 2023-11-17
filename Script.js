@@ -26,7 +26,7 @@ function NoRMenu(object) {
   object.addEventListener("contextmenu", (event) => { event.preventDefault(); });
 }
 
-// [Functions] - Class
+// [Functions] - (X)Class
 function AddClass(object, Class) {
     object.classList.add(Class);
 }

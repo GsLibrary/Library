@@ -43,3 +43,12 @@ function ChangeClass(object, RClass, AClass) {
 function ToggleClass(object, Class) {
     object.classList.toggle(Class);
 }
+
+// [Function] - On Key Press
+function KeyPress(GetKey, GetScript) {
+    document.addEventListener("keydown", function(event) {
+        if (event.key === GetKey) {
+            GetScript();
+        }
+    });
+}

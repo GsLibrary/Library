@@ -25,3 +25,21 @@ function OnRClick(object, callback) {
 function NoRMenu(object) {
   object.addEventListener("contextmenu", (event) => { event.preventDefault(); });
 }
+
+// [Functions] - Class
+function AddClass(object, Class) {
+    object.classList.add(Class);
+}
+
+function RemoveClass(object, Class) {
+    object.classList.remove(Class);
+}
+
+function ChangeClass(object, RClass, AClass) {
+    object.classList.remove(RClass);
+    object.classList.add(AClass);
+}
+
+function ToggleClass(object, Class) {
+    object.classList.toggle(Class);
+}

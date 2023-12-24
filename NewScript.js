@@ -34,6 +34,8 @@ function getRandom(Type, Set){
     } else if (Type === "2"){
         Set = Math.round(Math.random() * 100);
     } else if (Type === "3"){
+        Set = Math.round(Math.random() * 1000);
+    } else if (Type === "4"){    
         const RandomLetterCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         Set = RandomLetterCharacters.charAt(Math.floor(Math.random() * RandomLetterCharacters.length));
     } else {

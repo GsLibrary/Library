@@ -28,9 +28,26 @@ getRandom Function Usage:
 
 getRandom Function Example:
 
-    getRandom("3", PassCode)
+    getRandom("3", PassCode);
 
 getRandom Supported Types:
+
+>  - 1 - Random Number 0 - 10
+>  - 2 - Random Number 0 - 100
+>  - 3 - Random Number 0 - 1000
+>  - 4 - Random Character In The Alphabet
+
+<h2></h2>
+
+returnRandom Function Usage:
+
+    getRandom([Type]);
+
+returnRandom Function Example:
+
+    var RandomNumber = getRandom("3");
+
+returnRandom Supported Types:
 
 >  - 1 - Random Number 0 - 10
 >  - 2 - Random Number 0 - 100

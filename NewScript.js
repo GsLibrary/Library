@@ -1,7 +1,7 @@
 // Thanks For Choosing GsLibrary!
-// You Are Currently Using Version 1.0.5
+// You Are Currently Using Version 1.0.6
 
-// To Visit The Documents/Wiki Head To https://github.com/GsLibrary/Documents
+// To Visit The Documents/Wiki Head To https://github.com/GsLibrary/Library/blob/main/docs.md
 
 // OnEvent
 function onEvent(Event, Read, Callback) {
@@ -26,8 +26,7 @@ function onEvent(Event, Read, Callback) {
     }
 }
 
-// Generation
-// I Will Be Changing This One So It Uses Return Instead.
+// Generation Using Set
 function getRandom(Type, Set){
     if (Type === "1"){
         Set = Math.round(Math.random() * 10);
@@ -38,6 +37,22 @@ function getRandom(Type, Set){
     } else if (Type === "4"){    
         const RandomLetterCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         Set = RandomLetterCharacters.charAt(Math.floor(Math.random() * RandomLetterCharacters.length));
+    } else {
+        console.warn("Invalid Parameters");
+    }
+}
+
+// Generation Using Return
+function returnRandom(Type){
+    if (Type === "1"){
+        return(Math.round(Math.random() * 10));
+    } else if (Type === "2"){
+        return(Math.round(Math.random() * 100));
+    } else if (Type === "3"){
+        return(Math.round(Math.random() * 1000));
+    } else if (Type === "4"){    
+        const RandomLetterCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        return(RandomLetterCharacters.charAt(Math.floor(Math.random() * RandomLetterCharacters.length)));
     } else {
         console.warn("Invalid Parameters");
     }

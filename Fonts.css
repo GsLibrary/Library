@@ -1,22 +1,19 @@
 /* Thanks For Using G's Library */
 
-/* Sans Serif Fonts */
+/* Basic Fonts */
 
-/* Onest Font */
-@import url('https://fonts.googleapis.com/css2?family=Onest:wght@300');
-/* font-family: 'Onest', sans-serif; */
+  /* font-family: 'Onest', sans-serif; */
+  @import url('https://fonts.googleapis.com/css2?family=Onest:wght@300');
+  
+  /* font-family: 'Rubik', sans-serif; */
+  @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
-/* Rubik Font */
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-/* font-family: 'Rubik', sans-serif; */
+  /* font-family: 'Ubuntu', sans-serif; */
+  @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 
-/* Ubuntu Font */
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
-/* font-family: 'Ubuntu', sans-serif; */
+  /* font-family: 'Lato', sans-serif; */
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
-/* Lato Font */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-/* font-family: 'Lato', sans-serif; */
 
 /* Bulk Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Nosifer&family=Oswald:wght@400;700&display=swap');

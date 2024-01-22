@@ -1,5 +1,5 @@
 /* Thanks For Using G's Library */
-/* You Are Currently Using Version 1.0.6 */
+/* You Are Currently Using Version 1.0.7 */
 
   /* font-family: 'Onest', sans-serif; */
   @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&display=swap');
@@ -21,3 +21,8 @@
 
   /* font-family: 'Luckiest Guy', cursive; */
   @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+  @font-face {
+   font-family: SegoeUI;
+   src: url(segoe-ui.ttf);
+  }

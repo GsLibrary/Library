@@ -1,5 +1,6 @@
 // Thanks For Choosing GsLibrary!
-// You Are Currently Using Version 1.0.6
+// You Are Currently Using Version 1.0.8
+// May have some bugs, im editing this from github itself lol
 
 // To Visit The Documents/Wiki Head To https://github.com/GsLibrary/Library/blob/main/docs.md
 
@@ -15,6 +16,16 @@ function onEvent(Event, Read, Callback) {
         Read.addEventListener("mouseover", Callback);
     } else if (Event === "leave") {
         Read.addEventListener("mouseout", Callback);
+    } else if (Event === "input") {
+        Read.addEventListener("input", Callback);
+    } else if (Event === "focus") {
+        Read.addEventListener("focus", Callback);
+    } else if (Event === "submit") {
+        Read.addEventListener("submit", Callback);
+    } else if (Event === "load") {
+        Read.addEventListener("load", Callback);
+    } else if (Event === "change") {
+        Read.addEventListener("change", Callback);
     } else if (Event === "keypress") {
         document.addEventListener("keydown", function (event) {
             if (event.key === Read) {

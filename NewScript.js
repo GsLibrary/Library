@@ -1,11 +1,10 @@
 // Thanks For Choosing GsLibrary!
 // You Are Currently Using Version 1.0.8
-// May have some bugs, im editing this from github itself lol
 
 // To Visit The Documents/Wiki Head To https://github.com/GsLibrary/Library/blob/main/docs.md
 
 // OnEvent
-function onEvent(Event, Read, Callback) {
+function onEvent(Event, Read, Callback) { // cut, copy, paste, blur, contextmenu, focus, focusout, mouse enter, mouse leave, 
     if (Event === "click") {
         Read.addEventListener("click", Callback);
     } else if (Event === "rclick") {

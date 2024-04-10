@@ -22,6 +22,14 @@
   /* font-family: 'Luckiest Guy', cursive; */
   @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
+  /* font-family: 'Ubuntu Titling Bold', sans-serif; */
+  @font-face {
+    font-family: 'Ubuntu Titling Bold';
+    src: url('UbuntuTitling-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
  /* 
   @font-face {
    font-family: SegoeUI;

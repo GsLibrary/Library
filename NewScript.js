@@ -89,6 +89,44 @@ function getId(id) {
 }
 
 // Download Files From GitHub, Using GitHub API [TEST]
+function GitHubDownload(pathA, pathB) {
+    const apiUrl = `https://api.github.com/repos/${pathA}/contents/${pathB}?ref=main`;
+
+    // Fetch the data from the GitHub API
+    fetch(apiUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok: ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Check if the data is an array and get the correct file information
+            if (Array.isArray(data) && data.length > 0) {
+                const file = data[0]; // Assuming you want the first file in the directory
+                const downloadUrl = file.download_url;
+
+                // Create a temporary link element and trigger download
+                const link = document.createElement('a');
+                link.href = downloadUrl;
+
+                // Set the download filename: append ".zip" to the provided name or use the default
+                link.download = file.name || 'download'; // Use the actual filename
+
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            } else {
+                console.error('No files found or invalid data structure:', data);
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching the download URL:', error);
+        });
+}
+
+
+/*
 function GitHubDownload(pathA, pathB, downloadFileName) {
     const apiUrl = `https://api.github.com/repos/${pathA}/contents/${pathB}?ref=main`;
 
@@ -114,3 +152,4 @@ function GitHubDownload(pathA, pathB, downloadFileName) {
             console.error('Error fetching the download URL:', error);
         });
 }
+*/

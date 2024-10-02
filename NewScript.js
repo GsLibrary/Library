@@ -36,14 +36,14 @@ function onEvent(Event, Read, Callback) { // cut, copy, paste, blur, contextmenu
 }
 
 // Generation Using Set
-function getRandom(Type, Set){
-    if (Type === "1"){
+function getRandom(Type, Set) {
+    if (Type === "1") {
         Set = Math.round(Math.random() * 10);
-    } else if (Type === "2"){
+    } else if (Type === "2") {
         Set = Math.round(Math.random() * 100);
-    } else if (Type === "3"){
+    } else if (Type === "3") {
         Set = Math.round(Math.random() * 1000);
-    } else if (Type === "4"){    
+    } else if (Type === "4") {
         const RandomLetterCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         Set = RandomLetterCharacters.charAt(Math.floor(Math.random() * RandomLetterCharacters.length));
     } else {
@@ -52,31 +52,31 @@ function getRandom(Type, Set){
 }
 
 // Generation Using Return
-function returnRandom(Type){
-    if (Type === "1"){
-        return(Math.round(Math.random() * 10));
-    } else if (Type === "2"){
-        return(Math.round(Math.random() * 100));
-    } else if (Type === "3"){
-        return(Math.round(Math.random() * 1000));
-    } else if (Type === "4"){    
+function returnRandom(Type) {
+    if (Type === "1") {
+        return (Math.round(Math.random() * 10));
+    } else if (Type === "2") {
+        return (Math.round(Math.random() * 100));
+    } else if (Type === "3") {
+        return (Math.round(Math.random() * 1000));
+    } else if (Type === "4") {
         const RandomLetterCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        return(RandomLetterCharacters.charAt(Math.floor(Math.random() * RandomLetterCharacters.length)));
+        return (RandomLetterCharacters.charAt(Math.floor(Math.random() * RandomLetterCharacters.length)));
     } else {
         console.warn("Invalid Parameters");
     }
 }
 
 // Class
-function manageClass(Type, Read, A, B){
-    if (Type === "1" || "add"){
+function manageClass(Type, Read, A, B) {
+    if (Type === "1" || "add") {
         Read.classList.add(A);
-    } else if (Type === "2" || "remove"){
+    } else if (Type === "2" || "remove") {
         Read.classList.remove(A);
-    } else if (Type === "3" || "change" || "swap"){
+    } else if (Type === "3" || "change" || "swap") {
         Read.classList.remove(A);
         Read.classList.add(B);
-    } else if (Type === "4" || "toggle"){
+    } else if (Type === "4" || "toggle") {
         Read.classList.toggle(A);
     } else {
         console.warn("Invalid Parameters")
@@ -84,6 +84,33 @@ function manageClass(Type, Read, A, B){
 }
 
 // Get Element By ID
-function getId(id){
-    return(document.getElementById(id));
+function getId(id) {
+    return (document.getElementById(id));
+}
+
+// Download Files From GitHub, Using GitHub API [TEST]
+function GitHubDownload(pathA, pathB, downloadFileName) {
+    const apiUrl = `https://api.github.com/repos/${pathA}/contents/${pathB}?ref=main`;
+
+    // Fetch the data from the GitHub API
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            // Extract the download_url from the API response
+            const downloadUrl = data.download_url; // Corrected from data[0] to data
+
+            // Create a temporary link element and trigger download
+            const link = document.createElement('a');
+            link.href = downloadUrl;
+
+            // Set the download filename: append ".zip" to the provided name or use the default
+            link.download = downloadFileName ? `${downloadFileName}.zip` : '';
+
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        })
+        .catch(error => {
+            console.error('Error fetching the download URL:', error);
+        });
 }

@@ -82,3 +82,8 @@ function manageClass(Type, Read, A, B){
         console.warn("Invalid Parameters")
     }
 }
+
+// Get Element By ID
+function getId(id){
+    return(document.getElementById(id));
+}

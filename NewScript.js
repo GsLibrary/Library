@@ -125,6 +125,28 @@ function GitHubDownload(pathA, pathB) {
         });
 }
 
+// insertElementData
+function insertElementData(elementName, newData) {
+    // Define a dynamic custom element class
+    class DynamicElement extends HTMLElement {
+        connectedCallback() {
+            this.innerHTML = newData;
+        }
+    }
+
+    // Dynamically register the custom element if not already registered
+    if (!customElements.get(elementName)) {
+        customElements.define(elementName, DynamicElement);
+    }
+}
+
+// loadScripts
+function loadScript(url) {
+    const script = document.createElement('script');
+    script.src = url;
+    document.head.appendChild(script);
+}
+
 
 /*
 function GitHubDownload(pathA, pathB, downloadFileName) {
